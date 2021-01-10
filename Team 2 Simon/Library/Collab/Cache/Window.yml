@@ -14,22 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Materials.meta
-    - Assets/Materials/BlueButton.mat
-    - Assets/Materials/BlueButton.mat.meta
-    - Assets/Materials/GreenButton.mat
-    - Assets/Materials/GreenButton.mat.meta
-    - Assets/Materials/RedButton.mat
-    - Assets/Materials/RedButton.mat.meta
-    - Assets/Materials/YellowButton.mat
-    - Assets/Materials/YellowButton.mat.meta
-    - Assets/Prototype.unity
-    - Assets/Prototype.unity.meta
-    - Assets/Scripts.meta
-    - Assets/Scripts/SimonButton.cs
-    - Assets/Scripts/SimonButton.cs.meta
     - 
-    m_Values: 010101010101010101010101010101
+    m_Values: 01
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
