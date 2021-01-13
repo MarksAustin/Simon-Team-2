@@ -14,8 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Prototype.unity
+    - Assets/Scripts/Button.cs
+    - Assets/Scripts/Button.cs.meta
+    - Assets/Scripts/Player.cs
+    - Assets/Scripts/Player.cs.meta
+    - Assets/Scripts/Simon.cs
+    - Assets/Scripts/Simon.cs.meta
+    - ProjectSettings/TagManager.asset
     - 
-    m_Values: 01
+    m_Values: 010101010101010101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
