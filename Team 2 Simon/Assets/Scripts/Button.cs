@@ -27,15 +27,24 @@ public class Button : MonoBehaviour
    
     internal void Activate()
     {
+        if (isAnimating) return;
+
         if (coroutine != null) StopCoroutine(coroutine);
         StartCoroutine(ChangeObjColor(GetComponent<Renderer>().material));
     }
 
-
+    bool isAnimating = false;
     private IEnumerator ChangeObjColor(Material material)
     {
-        material.color = Color.black;
-        yield return new WaitForSeconds(1f);
-        material.color = buttonColor;
+        isAnimating = true;
+        LeanTween.cancel(gameObject);
+        // Tween Color change
+        LeanTween.moveLocalZ(gameObject, 0.2f, 0.5f);        
+        LeanTween.color(gameObject, Color.black, 0.5f).setEase(LeanTweenType.easeInOutSine);
+        yield return new WaitForSeconds(1.5f);
+        //Tween Color change
+        LeanTween.moveLocalZ(gameObject, 0, 0.5f);        
+        LeanTween.color(gameObject, buttonColor, 0.5f).setEase(LeanTweenType.easeInOutSine);        
+        isAnimating = false;
     }
 }
