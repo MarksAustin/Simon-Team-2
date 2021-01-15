@@ -10,6 +10,9 @@ public class Button : MonoBehaviour
 
     Material material;
 
+    public event Action<Button> buttonPressed;
+    public float buttonSpeed = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +32,12 @@ public class Button : MonoBehaviour
     {
         if (isAnimating) return;
 
+        Debug.Log(gameObject.name + " has been pressed");
+
         if (coroutine != null) StopCoroutine(coroutine);
         StartCoroutine(ChangeObjColor(GetComponent<Renderer>().material));
+
+        if (buttonPressed != null) buttonPressed(this);
     }
 
     bool isAnimating = false;
@@ -39,12 +46,15 @@ public class Button : MonoBehaviour
         isAnimating = true;
         LeanTween.cancel(gameObject);
         // Tween Color change
-        LeanTween.moveLocalZ(gameObject, 0.2f, 0.5f);        
-        LeanTween.color(gameObject, Color.black, 0.5f).setEase(LeanTweenType.easeInOutSine);
-        yield return new WaitForSeconds(1.5f);
+        LeanTween.moveLocalZ(gameObject, 0.2f, buttonSpeed);        
+        //LeanTween.color(gameObject, Color.black, 0.5f).setEase(LeanTweenType.easeInOutSine);
+
+        yield return new WaitForSeconds(buttonSpeed);
+
         //Tween Color change
-        LeanTween.moveLocalZ(gameObject, 0, 0.5f);        
-        LeanTween.color(gameObject, buttonColor, 0.5f).setEase(LeanTweenType.easeInOutSine);        
+        LeanTween.moveLocalZ(gameObject, 0, buttonSpeed);        
+        //LeanTween.color(gameObject, buttonColor, 0.5f).setEase(LeanTweenType.easeInOutSine);    
+        
         isAnimating = false;
     }
 }

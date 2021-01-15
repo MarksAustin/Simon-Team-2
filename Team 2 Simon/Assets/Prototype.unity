@@ -153,6 +153,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 0
+  buttons:
+  - {fileID: 977222670}
+  - {fileID: 575149380}
+  - {fileID: 982665303}
+  - {fileID: 1284673998}
+  numberOfChoices: 10
 --- !u!4 &185835585
 Transform:
   m_ObjectHideFlags: 0
@@ -166,6 +172,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1918068416}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &238198311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238198313}
+  - component: {fileID: 238198312}
+  m_Layer: 0
+  m_Name: SimonGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &238198312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238198311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06829b4908c42145922f0ce203ac230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simonPlayer: {fileID: 185835584}
+  player: {fileID: 364686655}
+  buttons:
+  - {fileID: 977222670}
+  - {fileID: 575149380}
+  - {fileID: 982665303}
+  - {fileID: 1284673998}
+--- !u!4 &238198313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238198311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 455872360}
+  - {fileID: 1918068416}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &364686654
 GameObject:
@@ -233,7 +291,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455872359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -241,8 +299,8 @@ Transform:
   - {fileID: 575149376}
   - {fileID: 982665299}
   - {fileID: 1284673994}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 238198313}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575149375
 GameObject:
@@ -353,6 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonColor: {r: 0, g: 0, b: 1, a: 0}
+  buttonSpeed: 0.1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonColor: {r: 1, g: 0, b: 0, a: 0}
+  buttonSpeed: 0.1
 --- !u!1 &982665298
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonColor: {r: 0, g: 1, b: 0, a: 0}
+  buttonSpeed: 0.1
 --- !u!1 &1284673993
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonColor: {r: 1, g: 1, b: 0, a: 0}
+  buttonSpeed: 0.1
 --- !u!1 &1918068415
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,12 +941,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918068415}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.17667542, y: 1.257857, z: -1.164988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 364686656}
   - {fileID: 185835585}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 238198313}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

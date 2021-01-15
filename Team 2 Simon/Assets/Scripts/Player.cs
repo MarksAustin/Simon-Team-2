@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Someone pressed Fire!");
             ray = cam.ScreenPointToRay(Input.mousePosition);
+
+            Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 3f);
+
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
