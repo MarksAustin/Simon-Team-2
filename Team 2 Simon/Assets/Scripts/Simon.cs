@@ -51,7 +51,7 @@ public class Simon : MonoBehaviour
         {
 
             buttons[choices[i]].Activate();
-            yield return new WaitForSeconds(0.35f);
+            yield return new WaitForSeconds(1f);
 
         }
     }

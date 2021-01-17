@@ -32,7 +32,7 @@ public class Button : MonoBehaviour
     {
         if (isAnimating) return;
 
-        Debug.Log(gameObject.name + " has been pressed");
+        //Debug.Log(gameObject.name + " has been pressed");
 
         if (coroutine != null) StopCoroutine(coroutine);
         StartCoroutine(ChangeObjColor(GetComponent<Renderer>().material));

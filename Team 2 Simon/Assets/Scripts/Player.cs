@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     Camera cam; //ref to main camera
     Ray ray; // ref to our mouse press position
 
+    public bool isOurTurn = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +23,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isOurTurn) return;
+
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("Someone pressed Fire!");
+            //Debug.Log("Someone pressed Fire!");
             ray = cam.ScreenPointToRay(Input.mousePosition);
 
             Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 3f);
@@ -34,7 +38,7 @@ public class Player : MonoBehaviour
                 if (hit.transform.tag.Equals("Button"))
                 {
                     Button button = hit.transform.GetComponent<Button>();
-                    Debug.Log("<color=green>We hit an Object</color> " + hit.transform.gameObject.name);
+                    //Debug.Log("<color=green>We hit an Object</color> " + hit.transform.gameObject.name);
                     button.Activate();
 
                     
